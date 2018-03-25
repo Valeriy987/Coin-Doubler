@@ -15,29 +15,7 @@
 		    });
 		});
 
-//изминение блока по высоте
-		//$(function(){
-  			//$('.learn').height($('.learn').width()/1.5);
-  			//$(window).resize(function(){
-    		//$('.learn').height($('.learn').width()/1.5);
-  			//});
-		//});
-
-//блоки
-/*$(function() {
-			    $('.link').on('click', function(e) {
-			        e.preventDefault();
-			        $('.q-ans').each(function() {
-			            $(this).css('display', 'none');
-			        });
-			        var block = $(this).attr('href');
-			        $(block).css('display', 'flex');
-			    });
-			});
-*/
-
 function functabs(number) {
-
 
   var divs = document.getElementsByClassName('q-ans');
   for (var i = 0; i < divs.length; i++) {
@@ -83,3 +61,21 @@ function functabs(number) {
 $('.reset').on('click', function() {
     $(this).closest('form').find('input[type=text], textarea').val('');
 });
+
+
+//появление ссылки
+		jQuery(function(f){
+		    var element = f('#back-top');
+		    f(window).scroll(function(){
+		        element['fade'+ (f(this).scrollTop() > 1000 ? 'In': 'Out')](1000);           
+		    });
+		});
+		//плавная прокрутка на верх
+		 $(document).ready(function(){
+		    $("#wrapper").on("click","#back-top", function (event) {
+		        event.preventDefault();
+		        var id  = $(this).attr('href'),
+		            top = $(id).offset().top;
+		        $('body,html').animate({scrollTop: top}, 1000);
+		    });
+		});
