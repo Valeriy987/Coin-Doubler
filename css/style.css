@@ -76,6 +76,26 @@ a, a:hover {color: #000; text-decoration: none;}
 
 #wrapper{padding-bottom:220px;}
 
+#back-top {
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    left: 94%;
+    margin-left: -50px;
+    height: 50px;
+    width: 50px;
+    background: rgba(255, 186, 0, 0.8) url(../img/arrow.png) no-repeat;
+    background-size: 60%;
+    background-position: center 35%;
+    z-index: 9999;
+    -webkit-border-radius: 100px;
+   
+    -moz-border-radius: 100px;
+   
+    border-radius: 100px;
+    
+}
+
 .conteiner{
 	height: 100%;
 	height: 100vh;
@@ -155,7 +175,7 @@ a, a:hover {color: #000; text-decoration: none;}
 .main{
 	height: auto;
 	padding-top: 100px;
-	padding-top: calc(0.1*100vh);
+	padding-top: calc(0.2*100vh);
 	text-align: center;
 }
 
@@ -780,10 +800,6 @@ h3{
 	color: #767676;
 	font-size: 14px;
 	font-family: Montserrat, Arial, sans-serif;
-}
-
-@media screen and (min-width:1280px) {
-	.main{padding-top: calc(0.3*100vh);}
 }
 
 
